@@ -5,6 +5,7 @@ import Login from './pages/Login';
 import Profile from './pages/Profile';
 import OwnerDashboard from './pages/OwnerDashboard';
 import ClienteDashboard from './pages/Client';
+import NotaFiscalInsercao from './pages/insert';
 import './App.css';
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
           <Route path="/profile" element={<Profile />} />
           <Route path="/owner" element={<OwnerDashboard />} />
           <Route path="/client" element={<ClienteDashboard />} />
+          <Route path="/insert" element={<NotaFiscalInsercao />} />
           <Route path="/" element={<Login />} /> {/* Defina o componente inicial */}
         </Routes>
       </div>

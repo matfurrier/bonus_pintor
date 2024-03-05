@@ -1,13 +1,13 @@
 import React from "react";
 import { Container, Box, Grid, Card, CardContent, Typography, Paper, List, ListItem, ListItemText, Button } from "@mui/material";
 import AccountBalanceWalletIcon from "@mui/icons-material/AccountBalanceWallet"; // Ícone para saldo de pontos
-import DescriptionIcon from "@mui/icons-material/Description"; // Ícone para notas cadastradas
 import TimelineIcon from "@mui/icons-material/Timeline"; // Ícone para gráfico
 import ListAltIcon from "@mui/icons-material/ListAlt"; // Ícone para extrato de pontos
-
+import HourglassEmptyIcon from '@mui/icons-material/HourglassEmpty';
 import PersonAddIcon from "@mui/icons-material/PersonAdd";
 import ContactMailIcon from "@mui/icons-material/ContactMail";
 import AddCircleOutlineIcon from "@mui/icons-material/AddCircleOutline";
+import ReceiptLongIcon from '@mui/icons-material/ReceiptLong';
 import { AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip, Legend } from 'recharts';
 
 const data = [
@@ -42,11 +42,14 @@ function ClienteDashboard() {
 
                 {/* Cards de Informações */}
                 <Grid container spacing={2}>
-                    <Grid item xs={6} >
+                    <Grid item xs={4} >
                         <InfoCard title="Saldo de Pontos" value="1.234" Icon={AccountBalanceWalletIcon} />
                     </Grid>
-                    <Grid item xs={6} >
-                        <InfoCard title="Notas Cadastradas" value="10" Icon={DescriptionIcon} />
+                    <Grid item xs={4} >
+                        <InfoCard title="Pontos Aguardando Validação" value="250" Icon={HourglassEmptyIcon} />
+                    </Grid>
+                    <Grid item xs={4} >
+                        <InfoCard title="Notas Cadastradas" value="10" Icon={ReceiptLongIcon} />
                     </Grid>
                     <Grid item xs={12}>
                         <Paper elevation={3} sx={{ margin: "24px 0", padding: 2 }}>
